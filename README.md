@@ -14,4 +14,17 @@ We used “Acer Windows Mixed Reality Headset with Motion Controllers,” which 
 ## Pipeline
 GEARS-XR consist of three components, LAMMPS interface, multi-user component, and the rendering component. LAMMPS is a molecular dynamics simulator library, which is widely used in material science research. As is often the case in material science, a large number of atoms are involved in LAMMPS simulations. Different from any other applications, e.g., games or movies, scientific visualization require strict criteria for preciseness, which makes multi-user component and rendering component non-trivial technical building blocks.
 
+# Sample Use Cases
+
+## Interactive Viewing
+The most straightforward application of our application is interactive viewing of pre- computed results. To demonstrate this aspect of GEARS, we use the results from precomputed atom MD simulation. The position of every molecule is calculated at each step. We isolate one step, or frame, of this simulation and import their coordinates to be rendered by our pipeline.
+This aspect provides a quick, straightforward outlet for immediate visualization of data from HPC simulations or structure files like those found on the RCS Protein Data Bank. This process has been expanded to create multiple scenes, each containing the results from a different time step. Then the simulation could be replayed dynamically frame by frame.
+
+## Real-time Simulation
+
+Once a simulation of interest has been coded, it still needs to be incorporated with the engine’s rendering mechanics. This relation can be programmed as the user sees fit. However, to minimize the amount of coding necessary, we present two methods by which simulations can be run and rendered in real-time. One involves running a timestep on a frame update call, then updating particles states on the same frame. We call this method, Run-and-Render. This method offloads the timestep computation onto a new thread, while the main game thread, responsible for handling the render state of the engine, maintains the simulation state of the previous timestep. When the timestep is finished computing, the game thread can either appropriately update the particle states or store them for rendering later while another thread continues to calculate future timesteps. We call this method Render-when-Ready.
+
+# Demos
+
+
 
