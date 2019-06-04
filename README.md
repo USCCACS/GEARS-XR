@@ -1,7 +1,7 @@
 # GEARS-XR: Collaborative Mixed Reality Platform for Scientific Visualization
 
 <div align="center">
-  <img src="https://drive.google.com/file/d/10RLxP5Cn2d9_ivuH-gHmD5rJzBty84Cu/view?usp=sharing" width=60%><br><br>
+  <img src="https://drive.google.com/open?id=10RLxP5Cn2d9_ivuH-gHmD5rJzBty84Cu" width=60%><br><br>
 </div>
 
 ## Summary
