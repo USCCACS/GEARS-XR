@@ -11,3 +11,7 @@ Visualization plays a critically important role in modern scientific research pr
 ## Environment
 We used “Acer Windows Mixed Reality Headset with Motion Controllers,” which has 1440x1440 resolution and 90 fps at maximum, as a head-mounted display. Each users’ headset is connected to a gaming laptop (Predator 17 X, GX-792). Speaking of software aspect, we developed all the software on the Unity 2017 game development platform, using Microsoft Mixed Reality Toolkit as a library. Concerning the networking part, our system highly depends on UNET; networking APT provided from Unity.
 
+## Pipeline
+GEARS-XR consist of three components, LAMMPS interface, multi-user component, and the rendering component. LAMMPS is a molecular dynamics simulator library, which is widely used in material science research. As is often the case in material science, a large number of atoms are involved in LAMMPS simulations. Different from any other applications, e.g., games or movies, scientific visualization require strict criteria for preciseness, which makes multi-user component and rendering component non-trivial technical building blocks.
+
+
