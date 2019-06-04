@@ -26,7 +26,5 @@ Once a simulation of interest has been coded, it still needs to be incorporated 
 
 # Demos
 
-<div align="center">
-  <img src="https://www.youtube.com/watch?v=cX5vcuuTM88" width=60%><br><br>
-</div>
+[![AppDemo](https://img.youtube.com/vi/cX5vcuuTM88/0.jpg)](https://www.youtube.com/watch?v=cX5vcuuTM88)
 
