@@ -1,0 +1,1329 @@
+LAMMPS (22 Aug 2018)
+# package omp 40
+# suffix omp
+variable xx equal 20
+variable yy equal 20
+variable zz equal 20
+units lj
+boundary p p p
+atom_style atomic
+lattice fcc 0.8442
+Lattice spacing in x,y,z = 1.6796 1.6796 1.6796
+region box block 0 ${xx} 0 ${yy} 0 ${zz}
+region box block 0 20 0 ${yy} 0 ${zz}
+region box block 0 20 0 20 0 ${zz}
+region box block 0 20 0 20 0 20
+create_box  1 box
+Created orthogonal box = (0 0 0) to (33.5919 33.5919 33.5919)
+  1 by 1 by 1 MPI processor grid
+create_atoms 1 box
+Created 32000 atoms
+  Time spent = 0.00694299 secs
+mass 1 1.0
+velocity all create 10 87287 loop geom
+neighbor 0.3 bin
+neigh_modify delay 0 every 20 check no
+pair_style lj/cut 2.5
+pair_coeff  1 1 1.0 1.0 2.5
+fix 1 all nve
+run 0
+Neighbor list info ...
+  update every 20 steps, delay 0 steps, check no
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 2.8
+  ghost atom cutoff = 2.8
+  binsize = 1.4, bins = 24 24 24
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut, perpetual
+      attributes: half, newton on
+      pair build: half/bin/atomonly/newton
+      stencil: half/bin/3d/newton
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 13.82 | 13.82 | 13.82 Mbytes
+Step Temp E_pair E_mol TotEng Press 
+       0           10   -6.7733681            0    8.2261632    2.2064189 
+Loop time of 0 on 1 procs for 0 steps with 32000 atoms
+
+0.0% CPU use with 1 MPI tasks x no OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0          | 0          | 0          |   0.0 |  0.00
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0          | 0          | 0          |   0.0 |  0.00
+Output  | 0          | 0          | 0          |   0.0 |  0.00
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0          |            |       |  0.00
+
+Nlocal:    32000 ave 32000 max 32000 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:    19911 ave 19911 max 19911 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:    1.248e+006 ave 1.248e+006 max 1.248e+006 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 1248000
+Ave neighs/atom = 39
+Neighbor list builds = 0
+Dangerous builds not checked
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+       0           10   -6.7733681            0    8.2261632    2.2064189 
+       1    9.9832205   -6.7490525            0    8.2253103     2.356313 
+Loop time of 0.0664649 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+       1    9.9832205   -6.7490525            0    8.2253103     2.356313 
+       2    9.9256391   -6.6654339            0    8.2225595    2.8395207 
+Loop time of 0.0666029 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+       2    9.9256391   -6.6654339            0    8.2225595    2.8395207 
+       3    9.8031811   -6.4853265            0    8.2189856    3.7691747 
+Loop time of 0.0670009 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+       3    9.8031811   -6.4853265            0    8.2189856    3.7691747 
+       4    9.5679311   -6.1433605            0    8.2080876     5.351185 
+Loop time of 0.0644798 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+       4    9.5679311   -6.1433605            0    8.2080876     5.351185 
+       5    9.1419952    -5.521607            0    8.1909573    7.9310115 
+Loop time of 0.06282 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+       5    9.1419952    -5.521607            0    8.1909573    7.9310115 
+       6     8.446782   -4.4868767            0    8.1829004    11.872317 
+Loop time of 0.0777309 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+       6     8.446782   -4.4868767            0    8.1829004    11.872317 
+       7    7.5323938   -3.0930435            0     8.205194    16.940422 
+Loop time of 0.0663838 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+       7    7.5323938   -3.0930435            0     8.205194    16.940422 
+       8    6.6773745   -1.7843523            0    8.2313965    21.679435 
+Loop time of 0.0669639 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+       8    6.6773745   -1.7843523            0    8.2313965    21.679435 
+       9    6.1590614    -1.006911            0    8.2313924    24.641791 
+Loop time of 0.073905 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+       9    6.1590614    -1.006911            0    8.2313924    24.641791 
+      10    6.0058821  -0.79076652            0     8.217775    25.706823 
+Loop time of 0.069936 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      10    6.0058821  -0.79076652            0     8.217775    25.706823 
+      11    6.0761283  -0.90742617            0    8.2064815    25.590974 
+Loop time of 0.07988 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      11    6.0761283  -0.90742617            0    8.2064815    25.590974 
+      12    6.2219213   -1.1307312            0    8.2018591    25.028878 
+Loop time of 0.0760281 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      12    6.2219213   -1.1307312            0    8.2018591    25.028878 
+      13    6.3562159   -1.3323077            0    8.2017182    24.459516 
+Loop time of 0.0768719 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      13    6.3562159   -1.3323077            0    8.2017182    24.459516 
+      14    6.4461851   -1.4651051            0    8.2038704    24.062929 
+Loop time of 0.077873 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      14    6.4461851   -1.4651051            0    8.2038704    24.062929 
+      15    6.4896672    -1.527659            0    8.2065376     23.86639 
+Loop time of 0.078861 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      15    6.4896672    -1.527659            0    8.2065376     23.86639 
+      16    6.4980377   -1.5367916            0    8.2099602    23.830191 
+Loop time of 0.0763988 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      16    6.4980377   -1.5367916            0    8.2099602    23.830191 
+      17    6.4902413   -1.5223443            0    8.2127134    23.866612 
+Loop time of 0.075073 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      17    6.4902413   -1.5223443            0    8.2127134    23.866612 
+      18    6.4812002   -1.5070716            0    8.2144249    23.906329 
+Loop time of 0.0734301 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      18    6.4812002   -1.5070716            0    8.2144249    23.906329 
+      19    6.4769881   -1.4991432            0    8.2160354    23.923039 
+Loop time of 0.076025 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      19    6.4769881   -1.4991432            0    8.2160354    23.923039 
+      20    6.4794452   -1.5150384            0    8.2038257    23.884969 
+Loop time of 0.18451 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      20    6.4794452   -1.5150384            0    8.2038257    23.884969 
+      21    6.4869668   -1.5261995            0    8.2039467    23.843493 
+Loop time of 0.072546 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      21    6.4869668   -1.5261995            0    8.2039467    23.843493 
+      22     6.496026   -1.5398053            0    8.2039292    23.793626 
+Loop time of 0.0719869 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      22     6.496026   -1.5398053            0    8.2039292    23.793626 
+      23    6.5033446   -1.5506072            0    8.2041049    23.752566 
+Loop time of 0.073724 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      23    6.5033446   -1.5506072            0    8.2041049    23.752566 
+      24    6.5076889   -1.5571957            0    8.2040326    23.724811 
+Loop time of 0.0750279 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      24    6.5076889   -1.5571957            0    8.2040326    23.724811 
+      25    6.5067044   -1.5558407            0    8.2039108    23.722642 
+Loop time of 0.0787032 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      25    6.5067044   -1.5558407            0    8.2039108    23.722642 
+      26    6.4997898   -1.5447077            0    8.2046722     23.75153 
+Loop time of 0.0783699 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      26    6.4997898   -1.5447077            0    8.2046722     23.75153 
+      27    6.4923147   -1.5328805            0    8.2052872    23.782958 
+Loop time of 0.0748961 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      27    6.4923147   -1.5328805            0    8.2052872    23.782958 
+      28    6.4886476   -1.5272817            0    8.2053856    23.794863 
+Loop time of 0.0759239 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      28    6.4886476   -1.5272817            0    8.2053856    23.794863 
+      29    6.4879268   -1.5261056            0    8.2054805    23.791943 
+Loop time of 0.080328 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      29    6.4879268   -1.5261056            0    8.2054805    23.791943 
+      30    6.4881736   -1.5256086            0    8.2063477    23.785435 
+Loop time of 0.07688 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      30    6.4881736   -1.5256086            0    8.2063477    23.785435 
+      31    6.4916797   -1.5297276            0    8.2074875    23.763288 
+Loop time of 0.0846529 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      31    6.4916797   -1.5297276            0    8.2074875    23.763288 
+      32    6.4989587   -1.5404616            0    8.2076718    23.719479 
+Loop time of 0.0721228 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      32    6.4989587   -1.5404616            0    8.2076718    23.719479 
+      33    6.5041981   -1.5471117            0    8.2088806    23.687757 
+Loop time of 0.0744019 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      33    6.5041981   -1.5471117            0    8.2088806    23.687757 
+      34    6.5070104   -1.5495915            0     8.210619    23.668184 
+Loop time of 0.0739038 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      34    6.5070104   -1.5495915            0     8.210619    23.668184 
+      35    6.5112049   -1.5544412            0     8.212061    23.640904 
+Loop time of 0.0773768 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      35    6.5112049   -1.5544412            0     8.212061    23.640904 
+      36     6.517616   -1.5630735            0     8.213045    23.602107 
+Loop time of 0.070322 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      36     6.517616   -1.5630735            0     8.213045    23.602107 
+      37    6.5213257   -1.5681764            0    8.2135065    23.574917 
+Loop time of 0.071625 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      37    6.5213257   -1.5681764            0    8.2135065    23.574917 
+      38    6.5164075   -1.5588757            0    8.2154301    23.593687 
+Loop time of 0.0729129 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      38    6.5164075   -1.5588757            0    8.2154301    23.593687 
+      39    6.5061081   -1.5414026            0    8.2174546     23.63866 
+Loop time of 0.0737078 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      39    6.5061081   -1.5414026            0    8.2174546     23.63866 
+      40     6.498171   -1.5464214            0    8.2005305    23.643171 
+Loop time of 0.216951 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      40     6.498171   -1.5464214            0    8.2005305    23.643171 
+      41    6.4979738   -1.5467296            0    8.1999265    23.638465 
+Loop time of 0.0734081 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      41    6.4979738   -1.5467296            0    8.1999265    23.638465 
+      42    6.5015642   -1.5527612            0    8.1992803    23.616169 
+Loop time of 0.079705 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      42    6.5015642   -1.5527612            0    8.1992803    23.616169 
+      43    6.5037654   -1.5558787            0    8.1994645    23.603517 
+Loop time of 0.0741589 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      43    6.5037654   -1.5558787            0    8.1994645    23.603517 
+      44    6.5044827   -1.5574147            0    8.1990045    23.596452 
+Loop time of 0.0764141 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      44    6.5044827   -1.5574147            0    8.1990045    23.596452 
+      45    6.5033207   -1.5552514            0    8.1994247    23.602275 
+Loop time of 0.07688 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      45    6.5033207   -1.5552514            0    8.1994247    23.602275 
+      46    6.5029147    -1.554696            0    8.1993713    23.604025 
+Loop time of 0.082392 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      46    6.5029147    -1.554696            0    8.1993713    23.604025 
+      47    6.5030421   -1.5550334            0     8.199225    23.603622 
+Loop time of 0.0757709 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      47    6.5030421   -1.5550334            0     8.199225    23.603622 
+      48    6.5014127   -1.5521237            0    8.1996906     23.61333 
+Loop time of 0.075629 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      48    6.5014127   -1.5521237            0    8.1996906     23.61333 
+      49    6.4999426   -1.5493254            0    8.2002838    23.622193 
+Loop time of 0.0792401 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      49    6.4999426   -1.5493254            0    8.2002838    23.622193 
+      50    6.4991643   -1.5481324            0    8.2003093    23.625523 
+Loop time of 0.077081 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      50    6.4991643   -1.5481324            0    8.2003093    23.625523 
+      51    6.4952848   -1.5415996            0    8.2010231    23.644221 
+Loop time of 0.0744481 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      51    6.4952848   -1.5415996            0    8.2010231    23.644221 
+      52    6.4900653   -1.5318706            0    8.2029232    23.670944 
+Loop time of 0.076879 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      52    6.4900653   -1.5318706            0    8.2029232    23.670944 
+      53    6.4896112   -1.5304006            0     8.203712    23.670232 
+Loop time of 0.0799041 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      53    6.4896112   -1.5304006            0     8.203712    23.670232 
+      54    6.4923616   -1.5338193            0    8.2044188    23.652546 
+Loop time of 0.076586 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      54    6.4923616   -1.5338193            0    8.2044188    23.652546 
+      55    6.4954395   -1.5365685            0    8.2062863    23.635309 
+Loop time of 0.0756159 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      55    6.4954395   -1.5365685            0    8.2062863    23.635309 
+      56    6.5020777   -1.5449499            0    8.2078619    23.599229 
+Loop time of 0.075274 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      56    6.5020777   -1.5449499            0    8.2078619    23.599229 
+      57     6.514942   -1.5629403            0    8.2091674    23.533121 
+Loop time of 0.0744009 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      57     6.514942   -1.5629403            0    8.2091674    23.533121 
+      58    6.5314914   -1.5872345            0    8.2096964    23.448149 
+Loop time of 0.0734069 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      58    6.5314914   -1.5872345            0    8.2096964    23.448149 
+      59    6.5428812    -1.603672            0    8.2103431     23.38923 
+Loop time of 0.070699 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      59    6.5428812    -1.603672            0    8.2103431     23.38923 
+      60    6.5421633   -1.6197457            0    8.1931926    23.361476 
+Loop time of 0.182852 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      60    6.5421633   -1.6197457            0    8.1931926    23.361476 
+      61    6.5310093   -1.6020196            0    8.1941882    23.417144 
+Loop time of 0.07494 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      61    6.5310093   -1.6020196            0    8.1941882    23.417144 
+      62    6.5189606   -1.5832154            0      8.19492    23.477776 
+Loop time of 0.081378 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      62    6.5189606   -1.5832154            0      8.19492    23.477776 
+      63    6.5142019   -1.5764739            0    8.1945237    23.501481 
+Loop time of 0.0758879 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      63    6.5142019   -1.5764739            0    8.1945237    23.501481 
+      64    6.5149321   -1.5781471            0    8.1939456    23.498801 
+Loop time of 0.0773771 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      64    6.5149321   -1.5781471            0    8.1939456    23.498801 
+      65     6.516479   -1.5805811            0     8.193832    23.493289 
+Loop time of 0.071424 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      65     6.516479   -1.5805811            0     8.193832    23.493289 
+      66     6.517333   -1.5817358            0    8.1939581    23.491414 
+Loop time of 0.0729129 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      66     6.517333   -1.5817358            0    8.1939581    23.491414 
+      67    6.5184672   -1.5831008            0    8.1942944    23.488913 
+Loop time of 0.071394 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      67    6.5184672   -1.5831008            0    8.1942944    23.488913 
+      68    6.5215813   -1.5874183            0     8.194648    23.477614 
+Loop time of 0.0723848 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      68    6.5215813   -1.5874183            0     8.194648    23.477614 
+      69    6.5243916   -1.5920588            0    8.1942229    23.466184 
+Loop time of 0.079335 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      69    6.5243916   -1.5920588            0    8.1942229    23.466184 
+      70    6.5193939   -1.5839299            0    8.1948553    23.494927 
+Loop time of 0.072911 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      70    6.5193939   -1.5839299            0    8.1948553    23.494927 
+      71    6.5059932   -1.5619372            0    8.1967475    23.567193 
+Loop time of 0.075392 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      71    6.5059932   -1.5619372            0    8.1967475    23.567193 
+      72    6.4942464    -1.542807            0    8.1982582    23.630069 
+Loop time of 0.0748682 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      72    6.4942464    -1.542807            0    8.1982582    23.630069 
+      73    6.4908867   -1.5368898            0     8.199136    23.651364 
+Loop time of 0.0778708 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      73    6.4908867   -1.5368898            0     8.199136    23.651364 
+      74    6.4940642   -1.5412764            0    8.1995155    23.640464 
+Loop time of 0.083822 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      74    6.4940642   -1.5412764            0    8.1995155    23.640464 
+      75    6.4961655   -1.5437149            0    8.2002289    23.635012 
+Loop time of 0.0734088 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      75    6.4961655   -1.5437149            0    8.2002289    23.635012 
+      76    6.4910386   -1.5344746            0     8.201779    23.665244 
+Loop time of 0.0734231 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      76    6.4910386   -1.5344746            0     8.201779    23.665244 
+      77     6.481107   -1.5172129            0    8.2041439    23.719352 
+Loop time of 0.0798221 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      77     6.481107   -1.5172129            0    8.2041439    23.719352 
+      78    6.4747857    -1.505811            0     8.206064    23.754298 
+Loop time of 0.078393 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      78    6.4747857    -1.505811            0     8.206064    23.754298 
+      79    6.4772644    -1.508509            0     8.207084    23.743784 
+Loop time of 0.079838 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      79    6.4772644    -1.508509            0     8.207084    23.743784 
+      80    6.4864631    -1.540284            0    8.1891066    23.669333 
+Loop time of 0.186471 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      80    6.4864631    -1.540284            0    8.1891066    23.669333 
+      81    6.4983167   -1.5584662            0    8.1887043    23.611143 
+Loop time of 0.075392 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      81    6.4983167   -1.5584662            0    8.1887043    23.611143 
+      82    6.5070187   -1.5719078            0    8.1883152    23.566812 
+Loop time of 0.0803609 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      82    6.5070187   -1.5719078            0    8.1883152    23.566812 
+      83    6.5091271   -1.5747112            0    8.1886743    23.555695 
+Loop time of 0.074863 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      83    6.5091271   -1.5747112            0    8.1886743    23.555695 
+      84    6.5059668   -1.5696435            0    8.1890017    23.569542 
+Loop time of 0.0778711 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      84    6.5059668   -1.5696435            0    8.1890017    23.569542 
+      85     6.500511    -1.561253            0    8.1892089    23.594804 
+Loop time of 0.0778809 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      85     6.500511    -1.561253            0    8.1892089    23.594804 
+      86    6.4960507   -1.5547852            0    8.1889864    23.614475 
+Loop time of 0.0788391 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      86    6.4960507   -1.5547852            0    8.1889864    23.614475 
+      87    6.4933734   -1.5502584            0    8.1894974    23.628008 
+Loop time of 0.0813439 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      87    6.4933734   -1.5502584            0    8.1894974    23.628008 
+      88    6.4950386   -1.5528193            0    8.1894341    23.618027 
+Loop time of 0.074399 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      88    6.4950386   -1.5528193            0    8.1894341    23.618027 
+      89    6.4987577   -1.5579859            0    8.1898459    23.598532 
+Loop time of 0.0783699 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      89    6.4987577   -1.5579859            0    8.1898459    23.598532 
+      90    6.5024664   -1.5626094            0    8.1907854    23.579137 
+Loop time of 0.072943 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      90    6.5024664   -1.5626094            0    8.1907854    23.579137 
+      91    6.5080321   -1.5701739            0    8.1915692    23.549328 
+Loop time of 0.077847 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      91    6.5080321   -1.5701739            0    8.1915692    23.549328 
+      92    6.5156043    -1.580751            0      8.19235    23.509277 
+Loop time of 0.0734079 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      92    6.5156043    -1.580751            0      8.19235    23.509277 
+      93    6.5244195   -1.5924799            0    8.1938435    23.465754 
+Loop time of 0.0729141 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      93    6.5244195   -1.5924799            0    8.1938435    23.465754 
+      94    6.5350467   -1.6075907            0    8.1946729    23.412747 
+Loop time of 0.0763581 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      94    6.5350467   -1.6075907            0    8.1946729    23.412747 
+      95    6.5424977   -1.6183396            0    8.1951003    23.375022 
+Loop time of 0.075392 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      95    6.5424977   -1.6183396            0    8.1951003    23.375022 
+      96    6.5401548   -1.6132946            0     8.196631    23.388018 
+Loop time of 0.075069 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      96    6.5401548   -1.6132946            0     8.196631    23.388018 
+      97    6.5299725   -1.5960139            0    8.1986388    23.440381 
+Loop time of 0.0714231 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      97    6.5299725   -1.5960139            0    8.1986388    23.440381 
+      98    6.5187679   -1.5775674            0    8.2002789    23.496827 
+Loop time of 0.0764072 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      98    6.5187679   -1.5775674            0    8.2002789    23.496827 
+      99    6.5104494   -1.5636769            0    8.2016921    23.538563 
+Loop time of 0.073441 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+      99    6.5104494   -1.5636769            0    8.2016921    23.538563 
+     100    6.5067013   -1.5758024            0    8.1839446    23.526366 
+Loop time of 0.188049 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     100    6.5067013   -1.5758024            0    8.1839446    23.526366 
+     101    6.5079505   -1.5776751            0    8.1839457     23.51994 
+Loop time of 0.0763829 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     101    6.5079505   -1.5776751            0    8.1839457     23.51994 
+     102    6.5124588   -1.5850431            0    8.1833399    23.495624 
+Loop time of 0.0793581 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     102    6.5124588   -1.5850431            0    8.1833399    23.495624 
+     103    6.5148947   -1.5890809            0    8.1829558    23.481224 
+Loop time of 0.0748961 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     103    6.5148947   -1.5890809            0    8.1829558    23.481224 
+     104    6.5120174   -1.5845477            0    8.1831732    23.493624 
+Loop time of 0.0679519 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     104    6.5120174   -1.5845477            0    8.1831732    23.493624 
+     105    6.5060895   -1.5754895            0    8.1833398    23.519958 
+Loop time of 0.0733778 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     105    6.5060895   -1.5754895            0    8.1833398    23.519958 
+     106    6.5015542   -1.5679982            0    8.1840284    23.541061 
+Loop time of 0.0769131 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     106    6.5015542   -1.5679982            0    8.1840284    23.541061 
+     107    6.5045163   -1.5725587            0    8.1839108     23.52456 
+Loop time of 0.0788691 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     107    6.5045163   -1.5725587            0    8.1839108     23.52456 
+     108     6.512098   -1.5850475            0    8.1827943    23.483466 
+Loop time of 0.071424 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     108     6.512098   -1.5850475            0    8.1827943    23.483466 
+     109    6.5141149   -1.5874532            0    8.1834138    23.474332 
+Loop time of 0.072964 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     109    6.5141149   -1.5874532            0    8.1834138    23.474332 
+     110    6.5090697    -1.579035            0    8.1842645    23.499985 
+Loop time of 0.0759208 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     110    6.5090697    -1.579035            0    8.1842645    23.499985 
+     111    6.4995837   -1.5643272            0    8.1847437    23.546339 
+Loop time of 0.0744178 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     111    6.4995837   -1.5643272            0    8.1847437    23.546339 
+     112     6.485782   -1.5422101            0    8.1861589    23.616177 
+Loop time of 0.075398 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     112     6.485782   -1.5422101            0    8.1861589    23.616177 
+     113     6.473956   -1.5221308            0    8.1884997    23.678668 
+Loop time of 0.078373 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     113     6.473956   -1.5221308            0    8.1884997    23.678668 
+     114    6.4730079   -1.5200443            0    8.1891641    23.683606 
+Loop time of 0.072387 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     114    6.4730079   -1.5200443            0    8.1891641    23.683606 
+     115    6.4810377   -1.5312199            0    8.1900328    23.645628 
+Loop time of 0.068975 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     115    6.4810377   -1.5312199            0    8.1900328    23.645628 
+     116    6.4922342     -1.54738            0    8.1906669    23.589912 
+Loop time of 0.075392 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     116    6.4922342     -1.54738            0    8.1906669    23.589912 
+     117    6.5005775   -1.5584678            0    8.1920937    23.548407 
+Loop time of 0.0748661 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     117    6.5005775   -1.5584678            0    8.1920937    23.548407 
+     118    6.5056075     -1.56423            0    8.1938763    23.522783 
+Loop time of 0.078861 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     118    6.5056075     -1.56423            0    8.1938763    23.522783 
+     119    6.5103115    -1.569982            0    8.1951801    23.497147 
+Loop time of 0.0684481 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     119    6.5103115    -1.569982            0    8.1951801    23.497147 
+     120    6.5144415   -1.5939098            0    8.1774471    23.444002 
+Loop time of 0.175585 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     120    6.5144415   -1.5939098            0    8.1774471    23.444002 
+     121    6.5153492   -1.5957632            0    8.1769552    23.436706 
+Loop time of 0.0866051 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     121    6.5153492   -1.5957632            0    8.1769552    23.436706 
+     122    6.5093462   -1.5865252            0     8.177189    23.465241 
+Loop time of 0.0803521 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     122    6.5093462   -1.5865252            0     8.177189    23.465241 
+     123     6.498986   -1.5701644            0      8.17801    23.517192 
+Loop time of 0.07443 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     123     6.498986   -1.5701644            0      8.17801    23.517192 
+     124    6.4905542   -1.5577597            0    8.1777674    23.557364 
+Loop time of 0.0724468 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     124    6.4905542   -1.5577597            0    8.1777674    23.557364 
+     125     6.484182    -1.548229            0      8.17774    23.588847 
+Loop time of 0.0709281 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     125     6.484182    -1.548229            0      8.17774    23.588847 
+     126    6.4801127   -1.5418784            0    8.1779869    23.609967 
+Loop time of 0.0773749 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     126    6.4801127   -1.5418784            0    8.1779869    23.609967 
+     127    6.4782448   -1.5396697            0    8.1773939    23.618072 
+Loop time of 0.0709279 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     127    6.4782448   -1.5396697            0    8.1773939    23.618072 
+     128    6.4755758   -1.5350075            0    8.1780526    23.633686 
+Loop time of 0.0709291 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     128    6.4755758   -1.5350075            0    8.1780526    23.633686 
+     129     6.473813   -1.5317094            0    8.1787066    23.644784 
+Loop time of 0.077867 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     129     6.473813   -1.5317094            0    8.1787066    23.644784 
+     130     6.475243   -1.5331816            0    8.1793794    23.640869 
+Loop time of 0.074894 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     130     6.475243   -1.5331816            0    8.1793794    23.640869 
+     131    6.4792902   -1.5386332            0    8.1799984    23.624487 
+Loop time of 0.068944 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     131    6.4792902   -1.5386332            0    8.1799984    23.624487 
+     132    6.4839699   -1.5449229            0     8.180728    23.605518 
+Loop time of 0.0734088 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     132    6.4839699   -1.5449229            0     8.180728    23.605518 
+     133    6.4878238   -1.5497433            0    8.1816884    23.591438 
+Loop time of 0.07688 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     133    6.4878238   -1.5497433            0    8.1816884    23.591438 
+     134    6.4925009   -1.5552346            0    8.1832125    23.575626 
+Loop time of 0.0748968 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     134    6.4925009   -1.5552346            0    8.1832125    23.575626 
+     135    6.4985369   -1.5641426            0    8.1833582    23.549418 
+Loop time of 0.0684488 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     135    6.4985369   -1.5641426            0    8.1833582    23.549418 
+     136    6.4990528   -1.5633215            0    8.1849531    23.553719 
+Loop time of 0.0674889 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     136    6.4990528   -1.5633215            0    8.1849531    23.553719 
+     137    6.4945118   -1.5549126            0    8.1865507     23.58146 
+Loop time of 0.081321 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     137    6.4945118   -1.5549126            0    8.1865507     23.58146 
+     138    6.4881801   -1.5441282            0    8.1878377    23.615606 
+Loop time of 0.0798571 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     138    6.4881801   -1.5441282            0    8.1878377    23.615606 
+     139    6.4813195   -1.5320299            0    8.1896456    23.652055 
+Loop time of 0.07688 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     139    6.4813195   -1.5320299            0    8.1896456    23.652055 
+     140    6.4771203   -1.5429466            0    8.1724302    23.642794 
+Loop time of 0.178756 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     140    6.4771203   -1.5429466            0    8.1724302    23.642794 
+     141    6.4774767   -1.5431507            0    8.1727607    23.641289 
+Loop time of 0.0823588 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     141    6.4774767   -1.5431507            0    8.1727607    23.641289 
+     142    6.4842552   -1.5534688            0    8.1726101    23.607029 
+Loop time of 0.074861 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     142    6.4842552   -1.5534688            0    8.1726101    23.607029 
+     143    6.4949557   -1.5703105            0    8.1718186    23.551759 
+Loop time of 0.071399 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     143    6.4949557   -1.5703105            0    8.1718186    23.551759 
+     144    6.5007427   -1.5798205            0    8.1709888     23.51935 
+Loop time of 0.0798311 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     144    6.5007427   -1.5798205            0    8.1709888     23.51935 
+     145    6.4957726   -1.5714207            0    8.1719337    23.542605 
+Loop time of 0.0728889 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     145    6.4957726   -1.5714207            0    8.1719337    23.542605 
+     146    6.4887216   -1.5598724            0    8.1729058    23.575864 
+Loop time of 0.071444 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     146    6.4887216   -1.5598724            0    8.1729058    23.575864 
+     147    6.4873063    -1.557872            0    8.1727833    23.579801 
+Loop time of 0.0862391 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     147    6.4873063    -1.557872            0    8.1727833    23.579801 
+     148    6.4901317   -1.5617181            0    8.1731752    23.564954 
+Loop time of 0.0843198 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     148    6.4901317   -1.5617181            0    8.1731752    23.564954 
+     149    6.4971418   -1.5719843            0    8.1734238     23.52946 
+Loop time of 0.072911 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     149    6.4971418   -1.5719843            0    8.1734238     23.52946 
+     150    6.5043028   -1.5831605            0    8.1729888    23.491118 
+Loop time of 0.0947361 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     150    6.5043028   -1.5831605            0    8.1729888    23.491118 
+     151    6.5033708   -1.5811971            0    8.1735542    23.494291 
+Loop time of 0.0907681 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     151    6.5033708   -1.5811971            0    8.1735542    23.494291 
+     152     6.493096   -1.5641586            0    8.1751811    23.544955 
+Loop time of 0.0838258 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     152     6.493096   -1.5641586            0    8.1751811    23.544955 
+     153     6.480887    -1.543894            0    8.1771328    23.606355 
+Loop time of 0.0783679 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     153     6.480887    -1.543894            0    8.1771328    23.606355 
+     154     6.474506   -1.5333972            0    8.1780583    23.637434 
+Loop time of 0.071424 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     154     6.474506   -1.5333972            0    8.1780583    23.637434 
+     155    6.4742844   -1.5324057            0    8.1787174    23.638189 
+Loop time of 0.07688 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     155    6.4742844   -1.5324057            0    8.1787174    23.638189 
+     156    6.4769903   -1.5349021            0    8.1802798     23.62701 
+Loop time of 0.073179 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     156    6.4769903   -1.5349021            0    8.1802798     23.62701 
+     157    6.4832616   -1.5428633            0    8.1817252    23.598243 
+Loop time of 0.0753608 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     157    6.4832616   -1.5428633            0    8.1817252    23.598243 
+     158    6.4928974   -1.5566644            0    8.1823773    23.551627 
+Loop time of 0.07936 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     158    6.4928974   -1.5566644            0    8.1823773    23.551627 
+     159    6.4980224   -1.5640435            0    8.1826855    23.525697 
+Loop time of 0.0685761 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     159    6.4980224   -1.5640435            0    8.1826855    23.525697 
+     160    6.4915037    -1.570948            0    8.1660032    23.529871 
+Loop time of 0.173599 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     160    6.4915037    -1.570948            0    8.1660032    23.529871 
+     161    6.4799447    -1.552498            0    8.1671153     23.58914 
+Loop time of 0.071424 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     161    6.4799447    -1.552498            0    8.1671153     23.58914 
+     162    6.4726185   -1.5419035            0    8.1667208    23.624078 
+Loop time of 0.0714509 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     162    6.4726185   -1.5419035            0    8.1667208    23.624078 
+     163    6.4705955   -1.5383937            0    8.1671962    23.636664 
+Loop time of 0.071888 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     163    6.4705955   -1.5383937            0    8.1671962    23.636664 
+     164    6.4753335    -1.546011            0    8.1666857    23.613946 
+Loop time of 0.069912 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     164    6.4753335    -1.546011            0    8.1666857    23.613946 
+     165    6.4822452   -1.5571624            0    8.1659015    23.579201 
+Loop time of 0.069937 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     165    6.4822452   -1.5571624            0    8.1659015    23.579201 
+     166    6.4851341    -1.560764            0    8.1666331    23.567261 
+Loop time of 0.06845 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     166    6.4851341    -1.560764            0    8.1666331    23.567261 
+     167    6.4869322   -1.5631729            0    8.1669213    23.558632 
+Loop time of 0.0763729 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     167    6.4869322   -1.5631729            0    8.1669213    23.558632 
+     168    6.4883378   -1.5652915            0    8.1669111    23.550978 
+Loop time of 0.072912 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     168    6.4883378   -1.5652915            0    8.1669111    23.550978 
+     169    6.4869565    -1.562688            0    8.1674427    23.558535 
+Loop time of 0.0684481 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     169    6.4869565    -1.562688            0    8.1674427    23.558535 
+     170    6.4833143   -1.5564238            0    8.1682437    23.577648 
+Loop time of 0.0699348 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     170    6.4833143   -1.5564238            0    8.1682437    23.577648 
+     171    6.4798388   -1.5501885            0     8.169266    23.597655 
+Loop time of 0.0694621 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     171    6.4798388   -1.5501885            0     8.169266    23.597655 
+     172    6.4776879   -1.5467346            0    8.1694935    23.609037 
+Loop time of 0.0719371 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     172    6.4776879   -1.5467346            0    8.1694935    23.609037 
+     173    6.4733277   -1.5388462            0    8.1708419    23.633794 
+Loop time of 0.0694399 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     173    6.4733277   -1.5388462            0    8.1708419    23.633794 
+     174    6.4695695   -1.5316011            0    8.1724499    23.655376 
+Loop time of 0.0699341 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     174    6.4695695   -1.5316011            0    8.1724499    23.655376 
+     175    6.4702016   -1.5314514            0    8.1735477    23.653411 
+Loop time of 0.074904 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     175    6.4702016   -1.5314514            0    8.1735477    23.653411 
+     176    6.4745221   -1.5366239            0    8.1748557    23.633589 
+Loop time of 0.069967 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     176    6.4745221   -1.5366239            0    8.1748557    23.633589 
+     177    6.4822654   -1.5470116            0    8.1760827    23.596794 
+Loop time of 0.0689709 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     177    6.4822654   -1.5470116            0    8.1760827    23.596794 
+     178    6.4916502   -1.5600157            0    8.1771552    23.552214 
+Loop time of 0.0723739 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     178    6.4916502   -1.5600157            0    8.1771552    23.552214 
+     179    6.4982022   -1.5689554            0    8.1780434    23.521238 
+Loop time of 0.0743992 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     179    6.4982022   -1.5689554            0    8.1780434    23.521238 
+     180    6.4964649   -1.5840626            0    8.1603303    23.500673 
+Loop time of 0.199396 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     180    6.4964649   -1.5840626            0    8.1603303    23.500673 
+     181     6.483844   -1.5647593            0    8.1607028    23.564229 
+Loop time of 0.0714328 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     181     6.483844   -1.5647593            0    8.1607028    23.564229 
+     182    6.4658842   -1.5366691            0    8.1618541    23.655519 
+Loop time of 0.069936 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     182    6.4658842   -1.5366691            0    8.1618541    23.655519 
+     183    6.4528553   -1.5170524            0    8.1619281    23.719379 
+Loop time of 0.0689139 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     183    6.4528553   -1.5170524            0    8.1619281    23.719379 
+     184    6.4479412   -1.5098101            0    8.1617994    23.742355 
+Loop time of 0.070904 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     184    6.4479412   -1.5098101            0    8.1617994    23.742355 
+     185    6.4502699   -1.5132356            0    8.1618669     23.72919 
+Loop time of 0.0699351 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     185    6.4502699   -1.5132356            0    8.1618669     23.72919 
+     186    6.4594803    -1.527287            0    8.1616307    23.680585 
+Loop time of 0.0704331 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     186    6.4594803    -1.527287            0    8.1616307    23.680585 
+     187    6.4717341   -1.5464524            0    8.1608454    23.614738 
+Loop time of 0.0704551 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     187    6.4717341   -1.5464524            0    8.1608454    23.614738 
+     188    6.4795072   -1.5577058            0    8.1612513    23.573313 
+Loop time of 0.0709221 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     188    6.4795072   -1.5577058            0    8.1612513    23.573313 
+     189    6.4816571   -1.5598564            0    8.1623254    23.560336 
+Loop time of 0.070401 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     189    6.4816571   -1.5598564            0    8.1623254    23.560336 
+     190    6.4831838   -1.5608709            0    8.1636008    23.552004 
+Loop time of 0.0754211 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     190    6.4831838   -1.5608709            0    8.1636008    23.552004 
+     191    6.4892934   -1.5694056            0    8.1642303    23.521248 
+Loop time of 0.071399 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     191    6.4892934   -1.5694056            0    8.1642303    23.521248 
+     192    6.4983046   -1.5828276            0    8.1643246    23.476624 
+Loop time of 0.0679519 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     192    6.4983046   -1.5828276            0    8.1643246    23.476624 
+     193    6.5029852   -1.5894903            0    8.1646826    23.453939 
+Loop time of 0.069442 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     193    6.5029852   -1.5894903            0    8.1646826    23.453939 
+     194    6.4975725   -1.5798566            0    8.1661976    23.482716 
+Loop time of 0.0700641 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     194    6.4975725   -1.5798566            0    8.1661976    23.482716 
+     195    6.4851428   -1.5591931            0    8.1682171     23.54591 
+Loop time of 0.0714421 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     195    6.4851428   -1.5591931            0    8.1682171     23.54591 
+     196    6.4744866   -1.5412892            0    8.1701371     23.60012 
+Loop time of 0.0699589 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     196    6.4744866   -1.5412892            0    8.1701371     23.60012 
+     197    6.4736143   -1.5385145            0    8.1716034    23.606163 
+Loop time of 0.070935 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     197    6.4736143   -1.5385145            0    8.1716034    23.606163 
+     198    6.4828792    -1.552081            0    8.1719339     23.56013 
+Loop time of 0.0708971 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     198    6.4828792    -1.552081            0    8.1719339     23.56013 
+     199    6.4934036   -1.5668748            0    8.1729262    23.509228 
+Loop time of 0.0689449 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     199    6.4934036   -1.5668748            0    8.1729262    23.509228 
+     200    6.5001666   -1.5942699            0    8.1556753    23.446896 
+Loop time of 0.170127 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     200    6.5001666   -1.5942699            0    8.1556753    23.446896 
+     201    6.5033591   -1.5988484            0    8.1558853    23.432105 
+Loop time of 0.0719521 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     201    6.5033591   -1.5988484            0    8.1558853    23.432105 
+     202    6.5032253   -1.5989538            0    8.1555794    23.432537 
+Loop time of 0.0714231 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     202    6.5032253   -1.5989538            0    8.1555794    23.432537 
+     203    6.4977509   -1.5905821            0    8.1557397     23.46063 
+Loop time of 0.070401 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     203    6.4977509   -1.5905821            0    8.1557397     23.46063 
+     204    6.4894062   -1.5769691            0     8.156836    23.506478 
+Loop time of 0.070467 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     204    6.4894062   -1.5769691            0     8.156836    23.506478 
+     205    6.4858203   -1.5719367            0    8.1564898    23.526484 
+Loop time of 0.0709081 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     205    6.4858203   -1.5719367            0    8.1564898    23.526484 
+     206    6.4852681   -1.5715241            0     8.156074    23.533134 
+Loop time of 0.0704322 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     206    6.4852681   -1.5715241            0     8.156074    23.533134 
+     207    6.4829548   -1.5679009            0    8.1562273    23.549459 
+Loop time of 0.069942 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     207    6.4829548   -1.5679009            0    8.1562273    23.549459 
+     208     6.477559   -1.5597084            0    8.1563264    23.579326 
+Loop time of 0.0709279 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     208     6.477559   -1.5597084            0    8.1563264    23.579326 
+     209    6.4708302    -1.548426            0     8.157516    23.617893 
+Loop time of 0.076417 on 1 procs for 1 steps with 32000 atoms
+
+run 1 pre no post no
+Step Temp E_pair E_mol TotEng Press 
+     209    6.4708302    -1.548426            0     8.157516    23.617893 
+     210    6.4676909   -1.5438488            0    8.1573844    23.634155 
+Loop time of 0.087296 on 1 procs for 1 steps with 32000 atoms
+
