@@ -56,7 +56,11 @@ The multi-user feature implemented here for virtual reality using network sharin
 * *Educational framework based on augmented reality for 3D molecules and structure visualization*
 AR techonolgies can be very effective in materials science and chemistry education for visualization and study of atoms, molecules, crystal lattices. There is a need for AR tools to support education at schools and universities. There is a need for following features to support such a framework:
 
-  * sfsf
+  * Using materials project API at the backend use gesture guided moves from the user to detect objects and images in the real world. These objects and image information are then relayed to Azure Cognitive Services to deconstruct these images, objects to their respective text-based structure identification. The structure identity is then queried to materials project API, to pull the information related to its 3D visualization, structure identification along with relevant property information.
+  
+  * 3D visualization of molecules, their dynamics and interaction possibility to form molecules from individual fragments.
+  
+  
 
  
 
