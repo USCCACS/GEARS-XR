@@ -26,10 +26,10 @@ Once a simulation of interest has been coded, it still needs to be incorporated 
 
 # Demos
 ## Application Demo
- [![AppDemo](https://img.youtube.com/vi/cX5vcuuTM88/0.jpg)](https://www.youtube.com/watch?v=cX5vcuuTM88)
+ [![App-Demo](https://img.youtube.com/vi/cX5vcuuTM88/0.jpg)](https://www.youtube.com/watch?v=cX5vcuuTM88)
  
 ## Graphene Folding Demo
 This demonstration shows the capability of our application to visualize series of data frames interactively
 
-[![AppDemo](https://img.youtube.com/vi/ZSGiU1FP5w/0.jpg)](https://www.youtube.com/watch?v=sZSGiU1FP5w)
+[![GrapheneFolding](https://img.youtube.com/vi/sZSGiU1FP5w/0.jpg)](https://www.youtube.com/watch?v=sZSGiU1FP5w)
 
