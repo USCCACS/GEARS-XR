@@ -30,6 +30,5 @@ Once a simulation of interest has been coded, it still needs to be incorporated 
  
 ## Graphene Folding Demo
 This demonstration shows the capability of our application to visualize series of data frames interactively
-
 [![GrapheneFolding](https://img.youtube.com/vi/sZSGiU1FP5w/0.jpg)](https://www.youtube.com/watch?v=sZSGiU1FP5w)
 
