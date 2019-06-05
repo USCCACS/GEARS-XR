@@ -37,3 +37,16 @@ This demonstration shows visualization of complex geometries like Kirigami unfol
 [![KirigamiUnfolding](https://img.youtube.com/vi/wpYFg3uoPMY/0.jpg)](https://www.youtube.com/watch?v=wpYFg3uoPMY)
 
 
+## Authors
+* Ankit Mishra (University of Southern California)
+* Rohan Rout (University of Southern California, now at MATLAB)
+* Vaibhav Desai (University of Southern California, now at CISCO)
+* Taufeq Razakh (University of Southern California)
+* Kuang Liu (University of Southern California)
+
+## Published works
+Game-Engine-Assisted Research platform for Scientific computing (GEARS) in virtual reality", 
+B. K. Horton, R. K. Kalia, E. Moen, A. Nakano, K. Nomura, M. Qian, P. Vashishta, and A. Hafreager
+*SoftwareX* 9, 112-116  (2019)
+https://www.sciencedirect.com/science/article/pii/S2352711018300633
+
