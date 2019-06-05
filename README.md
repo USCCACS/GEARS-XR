@@ -64,7 +64,9 @@ AR techonolgies can be very effective in materials science and chemistry educati
   
   
 
- 
+## Acknowledgments
+The work on mixed reality devices was supported by Microsoft MR Academic Program.
+
 
 
 ## Authors
