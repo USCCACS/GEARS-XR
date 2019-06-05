@@ -37,6 +37,11 @@ This demonstration shows visualization of complex geometries like Kirigami unfol
 [![KirigamiUnfolding](https://img.youtube.com/vi/wpYFg3uoPMY/0.jpg)](https://www.youtube.com/watch?v=wpYFg3uoPMY)
 
 
+# Future work
+We have extended the capability of our application for Windows Mixed Reality device to Hololens 1st generation. Since mixed reality platform provides easy portability to hololens, with little modifications we were able to extend our visualization framework to hololens.
+We further intend to develop an augmented reality application for enhancing education of 3D modelling of molecular structures, and visualization of atomic structures of various elements, compounds in a spatial surrounding. Our proposed framework will use materials project API [11] at the backend and will use gesture guided moved from the user to detect objects and images in the real world. These objects and image information are then relayed to Azure Cognitive Services to deconstruct these images, objects to their respective text-based structure identification. The structure identity is then queried to materials project API, to pull the information related to its 3D visualization, structure identification along with relevant property information. This will greatly improve an intuitive understanding of materials structure and property which can further aid in future education.
+
+
 ## Authors
 * Ankit Mishra (University of Southern California)
 * Rohan Rout (University of Southern California, now at MATLAB)
