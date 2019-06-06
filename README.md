@@ -60,7 +60,7 @@ For increasing the rendering capability of our application, such that it can sca
 
 * *AR multi-user feature*
 
-The multi-user feature implemented here for virtual reality using network sharing protocol cannot be identically run on hololens. Since, the sharing feature supported with hololens doesn't scales well with intensive atomic geometries.
+The multi-user feature implemented here for virtual reality using network sharing protocol cannot be identically run on hololens. Since, the sharing feature supported with hololens doesn't scales well with intensive atomic geometries. Hence, it is applicable to sharing small systems upto a few atoms efficiently.
 
 * *Educational framework based on augmented reality for 3D molecules and structure visualization*
 
