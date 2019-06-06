@@ -73,6 +73,7 @@ The work on mixed reality devices was supported by Microsoft MR Academic Program
 * Ankit Mishra (University of Southern California)
 * Rohan Rout (University of Southern California, now at MATLAB)
 * Vaibhav Desai (University of Southern California, now at CISCO)
+* Hikaru Ibayashi (University of Southern California)
 * Taufeq Razakh (University of Southern California)
 * Kuang Liu (University of Southern California)
 
