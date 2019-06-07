@@ -68,6 +68,8 @@ AR techonolgies can be very effective in materials science and chemistry educati
 
   * Using materials project API at the backend use gesture guided moves from the user to detect objects and images in the real world. These objects and image information are then relayed to Azure Cognitive Services to deconstruct these images, objects to their respective text-based structure identification. The structure identity is then queried to materials project API, to pull the information related to its 3D visualization, structure identification along with relevant property information.
   
+  A simple illustration of our idea is demonstrated in the figure displayed below. This simple application reads what is displayed on a white board and interprets it as a relevant text which can then be issued to Materials Project API to extract further useful information. We will utilize the extracted information to demonstrate useful ideas relevant to enhancing the intuitive understanding of various concepts.
+  
   * 3D visualization of molecules, their dynamics and interaction possibility to form molecules from individual fragments.
   
   
